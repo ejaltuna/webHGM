@@ -10,7 +10,7 @@ import { InvitationModal } from "./InvitationModal.jsx";
 
 const testimonialsData = [
   {
-    customerName: "John Watkins",
+    customerName: "John ",
     customerTitle: "Founder of Dashflow",
     url: "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
     content:
@@ -28,7 +28,7 @@ const testimonialsData = [
     price: "32.00",
   },
   {
-    customerName: "John Watkins",
+    customerName: "John Watkins Watkins",
     customerTitle: "Founder of Dashflow",
     url: "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
     content:
@@ -37,7 +37,7 @@ const testimonialsData = [
     price: "32.00",
   },
   {
-    customerName: "John Watkins",
+    customerName: "John kins",
     customerTitle: "Founder of Dashflow",
     url: "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
     content:
@@ -86,7 +86,7 @@ const testimonialsData = [
 export const Testimonials = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [producto, setProducto] = useState([]);
-  console.log(producto, "id222");
+  // console.log(producto, "id222");
 
   return (
     <section className="w-full flex justify-center pt-10 mb-16 lg:mb-32 bg-customDarkBg0 relative">

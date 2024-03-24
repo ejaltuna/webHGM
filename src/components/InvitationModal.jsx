@@ -5,7 +5,7 @@ import { CloseIcon } from "../assets/icons/CloseIcon";
 import { TailcastLogo } from "../assets/logos/TailcastLogo";
 
 export const InvitationModal = ({ setIsOpen, producto }) => {
-  console.log(producto, "id en modal");
+  console.log(producto, "id en modalssss");
   return (
     <>
       <AnimatePresence>
@@ -15,20 +15,20 @@ export const InvitationModal = ({ setIsOpen, producto }) => {
           transition={{ duration: 0.1 }}
           exit={{ opacity: 0 }}
         >
-         
           <div
             className=" w-full h-full  bg-customDarkBgTransparentDarker fixed top-0 left-0 flex  z-50 justify-center items-center"
             onClick={() => setIsOpen(false)}
           >
-          
             <div
               className="w-full h-screen sm:h-auto sm:w-3/4 md:w-3/5 lg:w-[1000px] xl:w-[1100px] sm:rounded-2xl bg-customDarkBgTransparentLighter custom-border-gray-darker py-2 px-2 sm:px-5 backdrop-blur-xl  sm:mb-8 fixed mx-auto z-50"
               onClick={(e) => e.stopPropagation()}
             >
-                 <div className="bg-[#352046] p-2 rounded-xl text-white font-bold z-50 text-center w-10 ml-auto cursor-pointer"
-                      onClick={() => setIsOpen(false)}>
-                      X
-                    </div>
+              <div
+                className="bg-[#352046] p-2 rounded-xl text-white font-bold z-50 text-center w-10 ml-auto cursor-pointer"
+                onClick={() => setIsOpen(false)}
+              >
+                X
+              </div>
               <div class="bg-white p-1 rounded-xl overflow-auto touch-auto md:grid md:grid-cols-2 h-[29rem] md:h-[32rem]">
                 {/* <!-- Image gallery --> */}
                 <div class="mx-auto mt-6 max-w-xl sm:px-2 lg:grid lg:max-w-2xl lg:grid-cols-3 lg:gap-x-2 lg:px-2">
@@ -68,7 +68,7 @@ export const InvitationModal = ({ setIsOpen, producto }) => {
                 <div class="mx-auto max-w-2xl px-4 pb-16 pt-10 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8 lg:px-8 lg:pb-24 lg:pt-16">
                   <div class="lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-4">
                     <h1 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
-                      Basic Tee 6-Pack
+                     {producto.customerName}
                     </h1>
                   </div>
 
@@ -284,7 +284,6 @@ export const InvitationModal = ({ setIsOpen, producto }) => {
                 </div>
               </div>
             </div>
-             
           </div>
         </motion.div>
       </AnimatePresence>
