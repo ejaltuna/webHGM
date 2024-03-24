@@ -10,13 +10,14 @@ module.exports = {
         customDarkBg1: "rgb(255 255 255)",
         customDarkBg2: "rgb(38, 39, 43)", 
         customDarkBg3: "rgb(221, 221, 221)", 
+        customDarkBg4:"rgb(160 2 2)",
         customDarkBg3Hover: "rgb(55, 56, 62)",
         customContentSubtitle: "rgb(178, 184, 205)",
         customGrayBorder: "rgb(255,255,255,0.1)",
         customGrayText: "rgb(174, 178, 183)",
         customDarkBgTransparent: "rgb(31, 32, 35, 0.7)",
         customDarkBgTransparentDarker: "rgb(0,0,0,0.5)",
-        customDarkBgTransparentLighter: "rgb(48, 49, 54, 0.7)"  
+        customDarkBgTransparentLighter: "rgb(48, 49, 54, 0.7)"     
       },
       fontFamily: {
         Inter: "Inter",

@@ -27,7 +27,7 @@ export const ScrollUpButton = () => {
     <>
       {isVisible && (
         <div
-          className="w-12 h-12 fixed bottom-6 right-6 custom-border-gray rounded-xl  bg-customDarkBg2 hover:bg-customDarkBg3 cursor-pointer flex justify-center items-center transition z-50"
+          className="w-12 h-12 fixed bottom-6 right-6 custom-border-gray rounded-xl  bg-customDarkBg4 hover:bg-customDarkBg2 cursor-pointer flex justify-center items-center transition z-50"
           onClick={scrollToTop}
         >
           <svg
@@ -39,7 +39,7 @@ export const ScrollUpButton = () => {
           >
             <path
               d="M4.16732 12.5L10.0007 6.66667L15.834 12.5"
-              stroke="rgb(99, 102, 241)"
+              stroke="#fff"
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"

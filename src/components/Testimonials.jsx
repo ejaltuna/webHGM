@@ -83,7 +83,7 @@ const testimonialsData = [
 ];
 
 export const Testimonials = () => (
-  <section className="w-full flex justify-center pt-10 mb-16 lg:mb-32 bg-customDarkBg2 relative">
+  <section className="w-full flex justify-center pt-10 mb-16 lg:mb-32 bg-customDarkBg0 relative">
     <div className="absolute -top-16" id="productos" />
     <div className="flex flex-col w-full lg:w-[1150px] justify-center">
       <motion.div
@@ -93,7 +93,7 @@ export const Testimonials = () => (
         transition={{ duration: 0.4, delay: 0.3 }}
       >
         <div className="custom-block-subtitle text-center mb-6">Catalogo</div>
-        <div className="custom-block-big-title text-center mb-16 px-8 sm:px-24 md:px-48">
+        <div className="custom-block-big-title-black text-center mb-16 px-8 sm:px-24 md:px-48">
           Productos recomendados por <span className="font-bold">HGM</span>
         </div>
 

@@ -9,7 +9,7 @@ import { CheckArrowIcon } from "../assets/icons/CheckArrowIcon";
 export const Features1 = () => {
   return (
     <section
-      className="w-full bg-customDarkBg2 mt-20 mb-8 sm:mt-16 sm:mb-16 xl:mt-0  xl:m pt-[2rem]  md:pt-[12vw] lg:pt-0"
+      className="w-full bg-customDarkBg1 mt-20 mb-8 sm:mt-16 sm:mb-16 xl:mt-0  xl:m pt-[2rem]  md:pt-[12vw] lg:pt-0"
       id="empresa"
     >
       <motion.div
@@ -22,15 +22,15 @@ export const Features1 = () => {
           <div className="w-full lg:w-1/2 mb-12 lg:mb-0">
             <div className="mx-auto lg:mx-auto w-11/12 sm:w-4/5 md:w-3/4 lg:w-unset">
               <span className="custom-block-subtitle">En HGM</span>
-              <h2 className="mt-6 mb-8 text-4xl lg:text-5xl custom-block-big-title">
+              <h2 className="mt-6 mb-8 text-4xl lg:text-5xl custom-block-big-title-black">
                 Somos la Empresa que busca la mejor calidad.
               </h2>
-              <p className="mb-10   leading-loose text-white">
+              <p className="mb-10   leading-loose ">
                 Discover a new level of data analysis with our innovative and
                 user-friendly platform. Transform your business needs with actionable
                 insights.
               </p>
-              <ul className="mb-6 text-white">
+              <ul className="mb-6 ">
                 <li className="mb-4 flex">
                   <CheckArrowIcon />
                   <span>Real-time data visualization</span>

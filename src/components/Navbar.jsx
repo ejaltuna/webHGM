@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-import Logo from "../assets/images/HGM.png";
+import Logo2 from "../assets/images/HGM.png";
+import Logo from "../assets/images/LogoHGM.png";
 import { GithubIcon } from "../assets/icons/GithubIcon";
 
 const navbarLinks = [
@@ -31,7 +32,7 @@ export const Navbar = () => {
         </div>
       </div>
 
-      <nav className="w-full h-20 flex flex-col justify-center items-center fixed bg-customDarkBg1 lg:bg-customDarkBg1 z-40 lg:backdrop-blur-xl">
+      <nav className=" w-full h-20 flex flex-col justify-center items-center fixed bg-customDarkBg1 lg:bg-customDarkBg1 z-40 lg:backdrop-blur-xl">
         <div className="2xl:w-[1280px] xl:w-10/12 w-11/12 flex justify-between items-center   ">
           <motion.div
             initial={{ opacity: 0 }}
@@ -39,13 +40,13 @@ export const Navbar = () => {
             transition={{ duration: 0.3 }}
             exit={{ opacity: 0 }}
           >
-            <a className="navbar-link" href="#home" aria-label="Home">
+            <a className="navbar-link" href="#inicio" aria-label="Home">
               <div className="flex justify-start items-center grow basis-0">
                 <div className="text-white md:mr-2 text-6xl">
-                  <img src={`${Logo}`} alt="" className="w-24 h-auto md:w-52" />
+                  <img src={`${Logo}`} alt="" className="w-16 h-auto md:w-20" />
                 </div>
-                <div className=" text-black md:text-black font-['Inter'] font-bold text-md md:text-xl">
-                  HGM
+                <div className=" text-black md:text-black font-['Inter'] font-bold text-md md:text-[3rem] hidden md:block">
+                  H <span className="text-md md:text-[2.5rem] -ml-3">GM</span>
                 </div>
               </div>
             </a>
@@ -55,6 +56,7 @@ export const Navbar = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.3 }}
             exit={{ opacity: 0 }}
+            className="ml-auto"
           >
             <div className="hidden lg:flex h-full pl-12 pb-2">
               {navbarLinks.map(({ href, label, ariaLabel }) => (
