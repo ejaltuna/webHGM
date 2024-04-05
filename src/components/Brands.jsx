@@ -11,61 +11,86 @@ import Modaldetailproducto from "../components/Modaldetailproducto.jsx";
 import { useState } from "react";
 import { InvitationModal } from "./InvitationModal.jsx";
 
-const testimonialsData = [
+const DataProductos = [
   {
-    customerName: "John Watkins",
-    customerTitle: "Founder of Dashflow",
-    url: "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
+    codigo:"KS02",
+    customerCorta: "Founder of Dashflow",
+    customerLarga: "Kit de puerta corrediza con tubo de 25mm Cromado",
+    url: "src/assets/images/ImgCatalogo/KS02.jpg",
     content:
-      "The powerful analytic tools have helped us streamline our processes and make data-driven decisions that positively impact our efficiency. Tailcast has been a game-changer for our business. The platform is easy to use, and the insights we've gained have driven significant improvements.",
+      "kit para puertas de vidrio corredizas ideales para dividir espacios y ambientes, son de fácil instalación y de uso sencillo.",
+    price: "80.00$",    
+   },
+  {
+    codigo: "MA01",
+    customerCorta: "Founder of Dashflow",
+    customerLarga: "Manilla tipo H de 15x25 cm combinada (satinado y cromado)",
+    url: "src/assets/images/ImgCatalogo/MA01.jpg",
+    content:
+      "Manilla pequeña tipo H ideal para puertas de baño, elegante y cómoda para el usuario.",
 
-    price: "32.00",
+    price: "8.0$",
   },
   {
-    customerName: "John Watkins",
-    customerTitle: "Founder of Dashflow",
-    url: "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
+    codigo: "KTV2",
+    customerCorta: "Founder of Dashflow",
+    customerLarga: "Kit de puerta todo vision con freno incluido satinado",
+    url: "src/assets/images/ImgCatalogo/KTV2.jpg",
     content:
-      "The powerful analytic tools have helped us streamline our processes and make data-driven decisions that positively impact our efficiency. Tailcast has been a game-changer for our business. The platform is easy to use, and the insights we've gained have driven significant improvements.",
+      " kit todo vision para puertas de vidrio, utilizada principalmente para entradas de locales comerciales y tiendas. Alto rendimiento para un trafico elevado de personas durante el día.",
 
-    price: "32.00",
+    price: "55.30",
   },
   {
-    customerName: "John Watkins",
-    customerTitle: "Founder of Dashflow",
-    url: "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
+    codigo: "KS10",
+    customerLarga: "Kit puerta corrediza con tubo rectangular dorado",
+    customerCorta: "Founder of Dashflow",
+    url: "src/assets/images/ImgCatalogo/KS10.jpg",
     content:
-      "The powerful analytic tools have helped us streamline our processes and make data-driven decisions that positively impact our efficiency. Tailcast has been a game-changer for our business. The platform is easy to use, and the insights we've gained have driven significant improvements.",
+      "kit para puertas de baño corrediza con tubo rectangular de 2 metros en dorado, se utiliza para la división entre el espacio del baño y la ducha, muy elegante y mucha durabilidad.",
 
-    price: "32.00",
+    price: "64.00",
   },
   {
-    customerName: "John Watkins",
-    customerTitle: "Founder of Dashflow",
-    url: "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
+    codigo:"CV01",
+    customerCorta: "Founder of Dashflow",
+    customerLarga: "Corta-vidrio toyo plástico TC-30",
+    url: "src/assets/images/ImgCatalogo/CV01.jpg",
     content:
-      "The powerful analytic tools have helped us streamline our processes and make data-driven decisions that positively impact our efficiency. Tailcast has been a game-changer for our business. The platform is easy to use, and the insights we've gained have driven significant improvements.",
+      "cortador de vidrio plástico, herramienta que se utiliza para hacer las piezas a medida para cada trabajo de vidrio.",
 
-    price: "32.00",
+    price: "7.54$",
   },
   {
-    customerName: "John Watkins",
-    customerTitle: "Founder of Dashflow",
-    url: "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
+    codigo:"RU01",
+    customerCorta: "Founder of Dashflow",
+    customerLargo: "Kit de ruedas colgantes con perforación.",
+    url: "src/assets/images/ImgCatalogo/RU01.jpg",
     content:
-      "The powerful analytic tools have helped us streamline our processes and make data-driven decisions that positively impact our efficiency. Tailcast has been a game-changer for our business. The platform is easy to use, and the insights we've gained have driven significant improvements.",
-
-    price: "32.00",
+      "par de ruedas colgantes que sujetan el vidrio con estabilidad y permite movilizarlo asi los lados.",
+  
+    price: "14.00$",
   },
   {
-    customerName: "John Watkins",
-    customerTitle: "Founder of Dashflow",
-    url: "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
+    codigo: "M03",
+    customerLargo: "Muelas para pulir 10S40",
+    customerCorta: "Founder of Dashflow",
+    url: "src/assets/images/ImgCatalogo/M03.jpg",
     content:
-      "The powerful analytic tools have helped us streamline our processes and make data-driven decisions that positively impact our efficiency. Tailcast has been a game-changer for our business. The platform is easy to use, and the insights we've gained have driven significant improvements.",
-
-    price: "32.00",
+      "muelas para maquinas de rectiliniado para vidrio, su funcion es pulir y sacar el brillo de las aristas del vidrio procesado.",
+  
+    price: "13.27$",
   },
+  {
+    codigo: "BS19",
+    customerLargo: "Founder of Dashflow",
+    customerCorta: "Bisagra pared/vidrio negra",
+    url: "src/assets/images/ImgCatalogo/BS19.jpg",
+    content:
+      "Bisgra pared/vidrio para abrir y cerrar puertas de vidrio templado, tiene capacidad de aguantar 25kg cada bisagra, utilizada frecuentemente para puertas de baño.",
+  
+    price: "6.95",
+  },  
 ];
 export const Brands = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -94,7 +119,7 @@ export const Brands = () => {
             <div className="w-2/4 sm:w-[620px] lg:w-1/2 mx-auto lg:mx-0 lg:pl-10">
               <div className="flex flex-wrap -m-4">
                 <Carousel cols={2} showDots loop>
-                  {testimonialsData?.map((prod, i) => {
+                  {DataProductos?.map((prod, i) => {
                     return (
                       <Carousel.Item>
                         <div className="bg-white p-2 rounded-lg border flex justify-center text-center">

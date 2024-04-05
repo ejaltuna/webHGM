@@ -8,79 +8,86 @@ import { useState } from "react";
 import Carousel from "react-grid-carousel";
 import { InvitationModal } from "./InvitationModal.jsx";
 
-const testimonialsData = [
+const DataProductos = [
   {
-    customerName: "John ",
-    customerTitle: "Founder of Dashflow",
-    url: "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
+    codigo:"KS02",
+    customerCorta: "Founder of Dashflow",
+    customerLarga: "Kit de puerta corrediza con tubo de 25mm Cromado",
+    url: "src/assets/images/ImgCatalogo/KS02.jpg",
     content:
-      "The powerful analytic tools have helped us streamline our processes and make data-driven decisions that positively impact our efficiency. Tailcast has been a game-changer for our business. The platform is easy to use, and the insights we've gained have driven significant improvements.",
-    image: testimonial1,
-    price: "32.00",
+      "kit para puertas de vidrio corredizas ideales para dividir espacios y ambientes, son de fácil instalación y de uso sencillo.",
+    price: "80.00$",    
+   },
+  {
+    codigo: "MA01",
+    customerCorta: "Founder of Dashflow",
+    customerLarga: "Manilla tipo H de 15x25 cm combinada (satinado y cromado)",
+    url: "src/assets/images/ImgCatalogo/MA01.jpg",
+    content:
+      "Manilla pequeña tipo H ideal para puertas de baño, elegante y cómoda para el usuario.",
+
+    price: "8.0$",
   },
   {
-    customerName: "John Watkins",
-    customerTitle: "Founder of Dashflow",
-    url: "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
+    codigo: "KTV2",
+    customerCorta: "Founder of Dashflow",
+    customerLarga: "Kit de puerta todo vision con freno incluido satinado",
+    url: "src/assets/images/ImgCatalogo/KTV2.jpg",
     content:
-      "The powerful analytic tools have helped us streamline our processes and make data-driven decisions that positively impact our efficiency. Tailcast has been a game-changer for our business. The platform is easy to use, and the insights we've gained have driven significant improvements.",
-    image: testimonial2,
-    price: "32.00",
+      " kit todo vision para puertas de vidrio, utilizada principalmente para entradas de locales comerciales y tiendas. Alto rendimiento para un trafico elevado de personas durante el día.",
+
+    price: "55.30$",
   },
   {
-    customerName: "John Watkins Watkins",
-    customerTitle: "Founder of Dashflow",
-    url: "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
+    codigo: "KS10",
+    customerLarga: "Kit puerta corrediza con tubo rectangular dorado",
+    customerCorta: "Founder of Dashflow",
+    url: "src/assets/images/ImgCatalogo/KS10.jpg",
     content:
-      "The powerful analytic tools have helped us streamline our processes and make data-driven decisions that positively impact our efficiency. Tailcast has been a game-changer for our business. The platform is easy to use, and the insights we've gained have driven significant improvements.",
-    image: testimonial3,
-    price: "32.00",
+      "kit para puertas de baño corrediza con tubo rectangular de 2 metros en dorado, se utiliza para la división entre el espacio del baño y la ducha, muy elegante y mucha durabilidad.",
+
+    price: "64.00$",
   },
   {
-    customerName: "John kins",
-    customerTitle: "Founder of Dashflow",
-    url: "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
+    codigo:"CV01",
+    customerCorta: "Founder of Dashflow",
+    customerLarga: "Corta-vidrio toyo plástico TC-30",
+    url: "src/assets/images/ImgCatalogo/CV01.jpg",
     content:
-      "The powerful analytic tools have helped us streamline our processes and make data-driven decisions that positively impact our efficiency. Tailcast has been a game-changer for our business. The platform is easy to use, and the insights we've gained have driven significant improvements.",
-    image: testimonial3,
-    price: "32.00",
+      "cortador de vidrio plástico, herramienta que se utiliza para hacer las piezas a medida para cada trabajo de vidrio.",
+
+    price: "7.54$",
   },
   {
-    customerName: "John Watkins",
-    customerTitle: "Founder of Dashflow",
-    url: "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
+    codigo:"RU01",
+    customerCorta: "Founder of Dashflow",
+    customerLarga: "Kit de ruedas colgantes con perforación.",
+    url: "src/assets/images/ImgCatalogo/RU01.jpg",
     content:
-      "The powerful analytic tools have helped us streamline our processes and make data-driven decisions that positively impact our efficiency. Tailcast has been a game-changer for our business. The platform is easy to use, and the insights we've gained have driven significant improvements.",
-    image: testimonial3,
-    price: "32.00",
+      "par de ruedas colgantes que sujetan el vidrio con estabilidad y permite movilizarlo asi los lados.",
+  
+    price: "14.00$",
   },
   {
-    customerName: "John Watkins",
-    customerTitle: "Founder of Dashflow",
-    url: "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
+    codigo: "M03",
+    customerLarga: "Muelas para pulir 10S40",
+    customerCorta: "Founder of Dashflow",
+    url: "src/assets/images/ImgCatalogo/M03.jpg",
     content:
-      "The powerful analytic tools have helped us streamline our processes and make data-driven decisions that positively impact our efficiency. Tailcast has been a game-changer for our business. The platform is easy to use, and the insights we've gained have driven significant improvements.",
-    image: testimonial3,
-    price: "32.00",
+      "muelas para maquinas de rectiliniado para vidrio, su funcion es pulir y sacar el brillo de las aristas del vidrio procesado.",
+  
+    price: "13.27$",
   },
   {
-    customerName: "John Watkins",
-    customerTitle: "Founder of Dashflow",
-    url: "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
+    codigo: "BS19",
+    customerLarga: "Founder of Dashflow",
+    customerCorta: "Bisagra pared/vidrio negra",
+    url: "src/assets/images/ImgCatalogo/BS19.jpg",
     content:
-      "The powerful analytic tools have helped us streamline our processes and make data-driven decisions that positively impact our efficiency. Tailcast has been a game-changer for our business. The platform is easy to use, and the insights we've gained have driven significant improvements.",
-    image: testimonial3,
-    price: "32.00",
-  },
-  {
-    customerName: "John Watkins",
-    customerTitle: "Founder of Dashflow",
-    url: "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
-    content:
-      "The powerful analytic tools have helped us streamline our processes and make data-driven decisions that positively impact our efficiency. Tailcast has been a game-changer for our business. The platform is easy to use, and the insights we've gained have driven significant improvements.",
-    image: testimonial3,
-    price: "32.00",
-  },
+      "Bisgra pared/vidrio para abrir y cerrar puertas de vidrio templado, tiene capacidad de aguantar 25kg cada bisagra, utilizada frecuentemente para puertas de baño.",
+  
+    price: "6.95$",
+  },  
 ];
 
 export const Testimonials = () => {
@@ -105,7 +112,7 @@ export const Testimonials = () => {
 
           <Carousel cols={5} showDots loop>
             {/* {products.map((val, i) => ( */}
-            {testimonialsData?.map((prod, i) => {
+            {DataProductos?.map((prod, i) => {
               return (
                 <Carousel.Item>
                   <div className="bg-white p-4 rounded-lg border">
@@ -132,12 +139,12 @@ export const Testimonials = () => {
                                   aria-hidden="true"
                                   className="absolute inset-0"
                                 ></span>
-                                {prod.customerTitle}
+                                {prod.customerLarga}
                               </a>
                             </h3>
-                            <p className="mt-1 text-sm text-gray-500">
-                              {prod.customerName}
-                            </p>
+                            {/* <p className="mt-1 text-sm text-gray-500">
+                              {prod.customerCorta}
+                            </p> */}
                           </div>
                           <p className="text-sm font-medium text-gray-900">
                             {prod.price}

@@ -34,7 +34,7 @@ export const InvitationModal = ({ setIsOpen, producto }) => {
                 <div class="mx-auto mt-6 max-w-xl sm:px-2 lg:grid lg:max-w-2xl lg:grid-cols-3 lg:gap-x-2 lg:px-2">
                   <div class="aspect-h-2 aspect-w-2 hidden overflow-hidden rounded-lg lg:block">
                     <img
-                      src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg"
+                      src={producto.url}
                       alt="Two each of gray, white, and black shirts laying flat."
                       class="h-full w-full object-cover object-center"
                     />
@@ -42,14 +42,14 @@ export const InvitationModal = ({ setIsOpen, producto }) => {
                   <div class="hidden lg:grid lg:grid-cols-1 lg:gap-y-8">
                     <div class="aspect-h-1 aspect-w-3 overflow-hidden rounded-lg">
                       <img
-                        src="https://tailwindui.com/img/ecommerce-images/product-page-02-tertiary-product-shot-01.jpg"
+                        src={producto.url}
                         alt="Model wearing plain black basic tee."
                         class="h-full w-full object-cover object-center"
                       />
                     </div>
                     <div class="aspect-h-1 aspect-w-3 overflow-hidden rounded-lg">
                       <img
-                        src="https://tailwindui.com/img/ecommerce-images/product-page-02-tertiary-product-shot-02.jpg"
+                        src={producto.url}
                         alt="Model wearing plain gray basic tee."
                         class="h-full w-full object-cover object-center"
                       />
@@ -57,7 +57,7 @@ export const InvitationModal = ({ setIsOpen, producto }) => {
                   </div>
                   <div class="aspect-h-5 aspect-w-4 lg:aspect-h-4 lg:aspect-w-3 sm:overflow-hidden sm:rounded-lg">
                     <img
-                      src="https://tailwindui.com/img/ecommerce-images/product-page-02-featured-product-shot.jpg"
+                      src={producto.url}
                       alt="Model wearing plain white basic tee."
                       class="h-full w-full object-cover object-center"
                     />
@@ -75,7 +75,7 @@ export const InvitationModal = ({ setIsOpen, producto }) => {
                   {/* <!-- Options --> */}
                   <div class="mt-4 lg:row-span-3 lg:mt-0">
                     <h2 class="sr-only">Product information</h2>
-                    <p class="text-3xl tracking-tight text-gray-900">$192</p>
+                    <p class="text-3xl tracking-tight text-gray-900">{producto.price}</p>
 
                     {/* <!-- Reviews --> */}
                     <div class="mt-6">
@@ -152,20 +152,16 @@ export const InvitationModal = ({ setIsOpen, producto }) => {
                           117 reviews
                         </a>
                       </div>
-                    </div>
-
-                    <form class="mt-10">
+                    </div> 
+                    {/* <form class="mt-10"> */}
                       {/* <!-- Colors --> */}
-                      <div>
+                      {/* <div>
                         <h3 class="text-sm font-medium text-gray-900">Color</h3>
 
                         <fieldset class="mt-4">
                           <legend class="sr-only">Choose a color</legend>
                           <div class="flex items-center space-x-3">
-                            {/* <!--
-                  Active and Checked: "ring ring-offset-1"
-                  Not Active and Checked: "ring-2"
-                --> */}
+                       
                             <label class="relative -m-0.5 flex cursor-pointer items-center justify-center rounded-full p-0.5 focus:outline-none ring-gray-400">
                               <input
                                 type="radio"
@@ -182,10 +178,7 @@ export const InvitationModal = ({ setIsOpen, producto }) => {
                                 class="h-8 w-8 bg-white rounded-full border border-black border-opacity-10"
                               ></span>
                             </label>
-                            {/* <!--
-                  Active and Checked: "ring ring-offset-1"
-                  Not Active and Checked: "ring-2"
-                --> */}
+                         
                             <label class="relative -m-0.5 flex cursor-pointer items-center justify-center rounded-full p-0.5 focus:outline-none ring-gray-400">
                               <input
                                 type="radio"
@@ -202,10 +195,7 @@ export const InvitationModal = ({ setIsOpen, producto }) => {
                                 class="h-8 w-8 bg-gray-200 rounded-full border border-black border-opacity-10"
                               ></span>
                             </label>
-                            {/* <!--
-                  Active and Checked: "ring ring-offset-1"
-                  Not Active and Checked: "ring-2"
-                --> */}
+                           
                             <label class="relative -m-0.5 flex cursor-pointer items-center justify-center rounded-full p-0.5 focus:outline-none ring-gray-900">
                               <input
                                 type="radio"
@@ -224,7 +214,7 @@ export const InvitationModal = ({ setIsOpen, producto }) => {
                             </label>
                           </div>
                         </fieldset>
-                      </div>
+                      </div> */}
 
                       {/* <!-- Sizes --> */}
                       {/* <div class="mt-10">
@@ -247,36 +237,25 @@ export const InvitationModal = ({ setIsOpen, producto }) => {
                       >
                         Add to bag
                       </button> */}
-                    </form>
+                    {/* </form> */}
                   </div>
 
-                  <div class="py-10 lg:col-span-2 lg:col-start-1 lg:border-r lg:border-gray-200 lg:pb-16 lg:pr-8 lg:pt-6">
+                  <div class="py-3 lg:col-span-2 lg:col-start-1 lg:border-r lg:border-gray-200 lg:pb-16 lg:pr-8 lg:pt-6">
                     {/* <!-- Description and details --> */}
-                    <div>
-                      <h3 class="sr-only">Description</h3>
-
+                    <div> 
                       <div class="space-y-6">
-                        <p class="text-base text-gray-900">
-                          The Basic Tee 6-Pack allows you to fully express your
-                          vibrant personality with three grayscale options.
-                          Feeling adventurous? Put on a heather gray tee. Want
-                          to be a trendsetter? Try our exclusive colorway:
-                          &quot;Black&quot;. Need to add an extra pop of color
-                          to your outfit? Our white tee has you covered.
-                        </p>
+                        <h3 class="text-base text-gray-900 font-semibold " >
+                           {producto.customerLarga}
+                        </h3>
                       </div>
                     </div>
 
                     <div class="mt-10">
-                      <h2 class="text-sm font-medium text-gray-900">Details</h2>
+                      <h2 class="text-sm font-medium text-gray-900">Descripcion</h2>
 
                       <div class="mt-4 space-y-6">
                         <p class="text-sm text-gray-600">
-                          The 6-Pack includes two black, two white, and two
-                          heather gray Basic Tees. Sign up for our subscription
-                          service and be the first to get new, exciting colors,
-                          like our upcoming &quot;Charcoal Gray&quot; limited
-                          release.
+                        {producto.content}
                         </p>
                       </div>
                     </div>
